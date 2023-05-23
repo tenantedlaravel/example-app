@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e6e7fe5fd9d19060838a2fee2857ca4",
+    "content-hash": "4a9b05b70ffb677d5033b3e468134a59",
     "packages": [
         {
             "name": "brick/math",
@@ -5193,6 +5193,63 @@
             "time": "2023-04-18T13:46:08+00:00"
         },
         {
+            "name": "tenantedlaravel/core",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/core",
+                "reference": "98389b507162e7c2a6a1ab0c357a0115c379fbe9"
+            },
+            "require": {
+                "laravel/framework": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "marcocesarato/php-conventional-changelog": "^1.17"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tenanted\\Core\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tenanted\\Tests\\Core\\": "tests"
+                }
+            },
+            "scripts": {
+                "changelog": [
+                    "conventional-changelog"
+                ],
+                "release": [
+                    "conventional-changelog --commit"
+                ],
+                "release:patch": [
+                    "conventional-changelog --patch --commit"
+                ],
+                "release:minor": [
+                    "conventional-changelog --minor --commit"
+                ],
+                "release:major": [
+                    "conventional-changelog --major --commit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ollie",
+                    "email": "code@ollie.codes"
+                }
+            ],
+            "description": "A flexible, seamless and easy to use multitenancy solution for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.6",
             "source": {
@@ -7885,7 +7942,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
